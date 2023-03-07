@@ -1,8 +1,8 @@
-# A series of simple alghorithms
+# A series of simple algorithms
 
 
 # Maximum of three numbers:
-def ex3(a, b, c):
+def max(a, b, c):
     max = 0
     nums = [a, b, c]
     for num in nums:
@@ -12,7 +12,7 @@ def ex3(a, b, c):
 
 
 # Checking if number is prime:
-def ex4(numar):
+def prime(numar):
     count = 0
     for i in range(1, numar + 1):
         if numar % i == 0:
@@ -24,7 +24,7 @@ def ex4(numar):
 
 
 # Printing the Fibonacci sequence:
-def ex5(limita):
+def fibonacci(limita):
     n_1 = 0
     n_2 = 1
     print(n_1)
@@ -37,7 +37,7 @@ def ex5(limita):
 
 
 # Largest number in a list:
-def ex13(numbers):
+def max_list(numbers):
     max = 0
     for number in numbers:
         if number > max:
@@ -46,8 +46,7 @@ def ex13(numbers):
 
 
 # Smallest number in a list:
-
-def ex14(numbers):
+def min_list(numbers):
     min = 99999999
     for number in numbers:
         if number < min:
@@ -56,7 +55,7 @@ def ex14(numbers):
 
 
 # Sum of the digits of a number:
-def ex17(n):
+def sum_digits(n):
     sum = 0
     string = str(n)
     for i in string:
@@ -65,7 +64,7 @@ def ex17(n):
 
 
 # Check if number is palindrome:
-def ex18(n):
+def palindrome(n):
     count = 0
     reverse = str(n)[::-1]
     for i in range(0, len(str(n))):
@@ -81,16 +80,16 @@ def ex18(n):
 suma = 0
 
 
-def ex26(n):
+def sum_n(n):
     global suma
     if n > 0:
         suma = suma + n
-        ex26(n - 1)
+        sum_n(n - 1)
     return suma
 
 
 # Find the sum of the digits of a number until it is a single digit:
-def ex27(n):
+def sum_last_digit(n):
     text = str(n)
     result = 0
     for i in range(len(text) - 1):
@@ -99,8 +98,20 @@ def ex27(n):
 
 
 # Find the sum of the squares of the first n natural numbers:
-def ex28(n):
+def squares_of_n(n):
     result = 0
     for i in range(1, n + 2):
         result = result + i ** 2
     print(result)
+
+
+max(14, 9, 13)
+prime(7)
+fibonacci(5)
+max_list([14, 9, 3])
+min_list([14, 2, 3])
+sum_digits(334)
+palindrome(344)
+print(sum_n(3))
+sum_last_digit(2347)
+squares_of_n(4)
